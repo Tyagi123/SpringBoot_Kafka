@@ -8,10 +8,10 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan(basePackages = {
 		"com.kafka*"
 })
-public class SpringBootKafkaApplication {
+public class SpringBootKafkaConsumerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootKafkaApplication.class, args);
+		SpringApplication.run(SpringBootKafkaConsumerApplication.class, args);
 	}
 
 }
