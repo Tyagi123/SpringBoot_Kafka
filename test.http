@@ -1,0 +1,2 @@
+# to add messages
+http://localhost:8081/publishmessage?message=%22Hello%20World%22
