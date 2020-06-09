@@ -6,11 +6,16 @@ bin/zkServer.sh start
 bin/kafka-server-start.sh config/server.properties
 
 # Add kafka topic
-bin/kafka-topics.sh --create --zookeeper localhost:2181  --replication-factor 1      --partitions 1  --topic Testing
+bin/kafka-topics.sh --create --zookeeper localhost:2181  --replication-factor 1      --partitions 1  --topic Test
+
+bin/kafka-topics.sh --create --zookeeper localhost:2181  --replication-factor 1      --partitions 1  --topic Testing_Json
+
 
 #cosumer (THis window will sow all the data added to topic )
-bin/kafka-console-consumer.sh  --bootstrap-server localhost:9092 --topic Testing  --from-beginning
+bin/kafka-console-consumer.sh  --bootstrap-server localhost:9092 --topic Test --from-beginning
 
 
 #Poducer
 bin/kafka-console-producer.sh --broker-list localhost:9092 --topic Testing
+
+bin/kafka-console-producer.sh --broker-list localhost:9092 --topic Testing_Json

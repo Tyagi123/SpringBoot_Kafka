@@ -13,6 +13,8 @@ public class ResourceController {
     private KafkaTemplate<String, User> kafkaTemplate;
 
     private static final String topic="Testing";
+    private static final String topic_json="Test";
+
 
     @GetMapping("/publishmessage")
     public String publishMessage( String message){
@@ -27,7 +29,7 @@ public class ResourceController {
 
     @GetMapping("/addUser")
     public String addUser( String name){
-        kafkaTemplate.send(topic,new User(name,"IT",12300L));
+        kafkaTemplate.send(topic_json,new User(name,"IT",12300L));
         return "Success";
     }
 }
